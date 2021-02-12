@@ -8,8 +8,10 @@ jobs:
         run: echo hello world
   build_skim: 
     runs-on: ubuntu-latest
+    continue-on-error: true
     container: rootproject/root-conda:${{ matrix.version }}
     strategy:
+      fail-fast: false
       matrix: 
         version: [6.18.04, latest]
     steps: 
