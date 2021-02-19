@@ -13,8 +13,8 @@ on:
       - feature/scheduled-run
 
   schedule: 
-    - cron: '*/15 * * * *'
-    - branches: 
+    cron: '*/15 * * * *'
+    branches: 
       - feature/scheduled-run
     
 
