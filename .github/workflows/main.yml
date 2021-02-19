@@ -1,5 +1,10 @@
 name: example
-on: push
+on: 
+  push: 
+  pull_request: 
+  schedule: 
+    - cron: '*/15 * * * *'
+
 jobs:
   build_skim: 
     runs-on: ubuntu-latest
