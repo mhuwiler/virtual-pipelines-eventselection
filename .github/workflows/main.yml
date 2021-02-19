@@ -101,7 +101,7 @@ jobs:
 
         with: 
           sources: "*.cxx"
-          style: "LVM"
+          style: "LLVM"
 
 
 
