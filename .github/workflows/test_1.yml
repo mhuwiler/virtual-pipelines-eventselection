@@ -1,0 +1,28 @@
+name: challenge
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+
+  test_1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test n.1
+        run: echo "run everywhere"
+
+  test_2:
+    runs-on: ubuntu-latest
+    needs: test_1
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: test n.2
+        run: echo "run on branch master"
+
+  test_3:
+    runs-on: ubuntu-latest
+    needs: test_2
+    if: github.ref == 'refs/heads/if-keyword'
+    steps:
+      - name: test n.3
+        run: echo "run on branch if-keyword"
