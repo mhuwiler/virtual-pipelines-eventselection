@@ -13,9 +13,9 @@ on:
       - feature/scheduled-run
 
   schedule: 
-    branches: 
-      - feature/scheduled-run
     - cron: '*/15 * * * *'
+    - branches: 
+      - feature/scheduled-run
     
 
 jobs:
