@@ -1,9 +1,22 @@
 name: example
 on: 
   push: 
+    branches: 
+      - master
+      - feature/add-actions
+      - feature/scheduled-run
+
   pull_request: 
+    branches: 
+      - master
+      - feature/add-actions
+      - feature/scheduled-run
+
   schedule: 
+    branches: 
+      - feature/scheduled-run
     - cron: '*/15 * * * *'
+    
 
 jobs:
   build_skim: 
