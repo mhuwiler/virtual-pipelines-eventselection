@@ -97,7 +97,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Clang Format Github Action
-        uses: germasch/clang-format-github-action@v1
+        uses: germasch/clang-format-github-action@e8c96fc461ee44835bcb79f6aedd64f80c471448
 
         with: 
           sources: "*.cxx"
